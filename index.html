@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb ON OFF</title>
+</head>
+<style>
+    h1{
+        color: rgb(109, 110, 77);
+    }
+    body{
+       
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        flex-direction: column;
+        background-color: #f5ebeb;
+        background-image: url("r2.jpg");
+        display: flex;
+        
+      
+    }
+    img{
+        height: 20vh;
+        padding: 8px;
+        display: flex;
+        position: relative;
+        left: 10%;
+
+    }
+    button{
+        background-color: rgb(113, 110, 206);
+        height: 30px;
+        width: 40px;
+        padding: 5px 5px;
+        margin: 8px;
+        border: none;
+        border-radius: 100px;
+        position: relative;
+        left: 19%;
+        bottom: 140px;
+    }
+button:hover{
+    background-color:white;
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+
+</style>
+<body>
+    <h1>light</h1>
+    <img id="bulb" src="./bulb_off.jpg" alt="bulb">
+    <button onclick="bulb(0)">ON</button>
+    <button onclick="bulb(1)" >OFF</button>
+   
+    <script>
+        function bulb(value){
+            let picture;
+            if(value == 1){
+                picture = "bulb_off.jpg"
+            }
+            else{
+                picture = "bulb_on.jpg"
+            }
+            document.getElementById('bulb').src=picture;
+        }
+    </script>
+</body>
+</html>
